@@ -11,7 +11,8 @@ import java.util.Optional;
 public class MemberService {
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
-
+    //git 추가..
+    
     /**
      * 회원 가입
      */

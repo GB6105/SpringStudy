@@ -10,9 +10,14 @@ import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
     //git 추가..
-    
+
     /**
      * 회원 가입
      */
@@ -39,7 +44,7 @@ public class MemberService {
         return memberRepository.findAll();
     }
 
-    public Optional<Member> findMember(Long id){
+    public Optional<Member> findOne(Long id){
         return memberRepository.findById(id);
     }
 }
